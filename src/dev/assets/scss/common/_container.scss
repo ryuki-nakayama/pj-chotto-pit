@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* container
+--------------------------------------------------*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 g.$padding-pc;
+  max-width: var(--container-width);
+  --container-width: #{g.$container-width};
+  @include g.atQuery(sm) {
+    padding: 0 g.$padding-sm
+  }
+
+  // modifier | small
+  &._sm {
+    --container-width: #{g.$container-width-sm};
+  }
+
+  // modifier | large
+  &._lg {
+    --container-width: #{g.$container-width-lg};
+
+  }
+}

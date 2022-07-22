@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@use 'variables' as *;
+
+// media query（定義済みのブレークポイント）
+@mixin atQuery($breakpoint: sm) {
+	@media only screen and #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// media query（定義済みのブレークポイント）
+@mixin mq($breakpoint: sm) {
+	@media only screen and #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// media query（任意のブレークポイント）
+// constraintには'min', 'max', 'min-max'を指定
+@mixin atSpecifiedQuery ($constraint, $viewport1, $viewport2: null) {
+  $min: min-width;
+  $max: max-width;
+  @if $constraint == 'min' {
+    @media only screen and ($min: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == 'max' {
+    @media only screen and ($max: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == 'min-max' {
+    @media only screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  } @else {
+    @error "第一引数は「min, max, min-max」のどれかを指定してください。";
+  }
+}
+
+// flex
+// 適宜ブレークポイント指定
+@mixin flexAtQuery($breakpoint: null) {
+  @if $breakpoint == null {
+    display: flex;
+    @content;
+  } @else {
+  @include atQuery($breakpoint) {
+      display: flex;
+      @content;
+    }
+  }
+}
+
+// pseudo element
+@mixin pseudo($content: "", $top: 0, $right: null, $bottom: null, $left: 0) {
+	content: $content;
+	position: absolute;
+	display: inline-block;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+  width: 100%;
+  height: 100%;
+  @content;
+}
+
+// position center
+// 親要素のセンターに配置
+@mixin posCenter($direction: xy) {
+	position: absolute;
+	@if $direction == xy {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@else if $direction == x {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@else if $direction == y {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+// flex center
+// 子要素をセンターに配置
+@mixin flexCenter($direction: xy) {
+  display: flex;
+	@if $direction == xy {
+    justify-content: center;
+    align-items: center;
+	}
+	@else if $direction == x {
+    justify-content: center;
+	}
+	@else if $direction == y {
+    align-items: center;
+	}
+}
+
+// arrow
+@mixin arrow($size, $borderWidth, $borderStyle, $borderColor, $direction) {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: $size;
+  height: $size;
+  margin-top: - (math.div($size, 2));
+  border: $borderWidth $borderStyle $borderColor;
+  @if $direction == up {
+    transform: rotate(-135) + deg;
+  } @else if $direction == under {
+    transform: rotate(45) + deg;
+  } @else if $direction == right {
+    transform: rotate(-45) + deg;
+  } @else if $direction == left {
+    transform: rotate(135) + deg;
+  } @else {
+    transform: rotate($direction) + deg;
+  }
+}
+
+// element
+@mixin element($elements...) {
+  @each $element in $elements {
+    &__#{$element} {
+      @content;
+    }
+  }
+}
+
+// modifier
+@mixin modifier($modifiers...) {
+  @each $modifier in $modifiers {
+    &--#{$modifier} {
+      @content;
+    }
+  }
+}
+
+// not first
+@mixin notFirst() {
+  &:not(:first-of-type) {
+    @content;
+  }
+}
+
+// not last
+@mixin notLast() {
+  &:not(:last-of-type) {
+    @content;
+  }
+}
+
+// transition
+@mixin transition($property) {
+  transition-property: $property;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+}
+
+@mixin font-style($number) {
+  @if $number == 1 {
+    line-height: calc(28 / 16);
+  } @else if $number == 2 {
+    line-height: calc(24 / 16);
+  } @else if $number == 3 {
+    font-size: 14rem;
+    line-height: calc(24 / 14);
+  } @else if $number == 4 {
+    font-size: 12rem;
+    line-height: calc(22 / 12);
+  } @else {
+    @error "引数は「1〜4」を選択してください。";
+  }
+}

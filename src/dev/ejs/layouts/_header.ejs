@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+	<!-- Start meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title><%= title %></title>
+	<meta name="description" content="<%= description %>">
+	<link rel="icon" href="<%= path %>favicon.ico">
+
+	<!-- Start script -->
+	<%- include('../common/_priority-script', {path: path}); %>
+
+	<!-- Start stylesheet -->
+	<%- include('../common/_stylesheet', {path: path}); %>
+
+</head>
+
+<!-- Start body -->
+<body class="<%= pageName %>">
+
+	<!-- Start header -->
+	<header id="js-header" class="header">
+		<div class="container container--lg">
+			<div class="header__inner">
+
+				<!-- logo -->
+				<div class="header__logo logo">
+					<a href="<%= path %>"><img src="<%= path %>img/common/logo.png" alt="Logo"></a>
+				</div>
+
+				<!-- hamburger for-sm -->
+				<button type="button" id="js-hamburgerBtn" class="header__hamburger hamburger for-sm">
+					<span class="hamburger__icon"></span>
+					<span class="hamburger__icon"></span>
+					<span class="hamburger__icon"></span>
+				</button>
+
+				<!-- nav -->
+				<nav id="js-nav" class="js-canScroll header__nav nav">
+					<ul class="header__list nav__list">
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>sub-page/sub1-page.html">sub page1</a></li>
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>#section1">menu1</a></li>
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>#section2">menu2</a></li>
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>#section3">menu3</a></li>
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>#section4">menu4</a></li>
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>#section5">menu5</a></li>
+						<li class="header__menu nav__menu"><a class="hover-underline" href="<% if (pageName != 'top-page') { %><%= path %><% } %>contact.html">contact</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	</header>

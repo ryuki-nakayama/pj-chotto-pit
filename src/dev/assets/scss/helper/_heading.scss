@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* heading
+--------------------------------------------------*/
+h1,
+.h1 {
+	font-size: 35rem;
+	font-weight: 700;
+	line-height: g.calcLineHeight(40, 35);
+	@include g.atQuery(sm) {
+		font-size: 24rem;
+		line-height: g.calcLineHeight(36, 24);
+	}
+}
+
+h2,
+.h2 {
+	font-size: 20rem;
+	font-weight: 800;
+	line-height: g.calcLineHeight(26, 20);
+}
+
+h3,
+.h3 {
+	font-size: 15rem;
+	font-weight: 600;
+	line-height: g.calcLineHeight(19.5, 15);
+}

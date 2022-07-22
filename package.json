@@ -1,0 +1,41 @@
+{
+  "name": "base-files",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "npx gulp sass --production",
+    "cache": "npx gulp cache",
+    "dev": "NODE_ENV=development npx gulp build && NODE_ENV=development npx gulp",
+    "build": "NODE_ENV=production npx gulp build --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryuki-nakayama/base-files.git"
+  },
+  "keywords": [],
+  "author": "Ryuki Nakayama",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://github.com/ryuki-nakayama/base-files.git#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "css-declaration-sorter": "^6.3.0",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^5.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-prettier": "^4.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sitemap": "^8.0.0",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.14",
+    "sass": "^1.53.0"
+  }
+}

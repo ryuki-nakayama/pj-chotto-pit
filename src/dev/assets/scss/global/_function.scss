@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@use "sass:math";
+@use 'variables' as *;
+
+// to vw
+// px->vwへの変換
+// @param px: デザインカンプの値（'px'はつけずに数値だけ）
+// @param mediaType: 基準にする画面幅
+// @return px->vwに変換した数値
+@function vw($px, $mediaType) {
+	@if ($mediaType == 'sm') {
+		@return calc($px / $canvas-width-sp * 100vw);
+	} @else if ($mediaType == 'tab') {
+		@return calc($px / $container-width--no-unit * 100vw);
+	} @else if ($mediaType == 'pc'){
+		@return calc($px / $canvas-width-pc * 100vw);
+	} @else {
+		@error "第2引数には「sm, tab, pc」を指定してください。";
+	}
+}
+
+// to percent
+// px->percentの変換
+// @param px: デザインカンプの値('px'はつけずに数値だけ)
+// @param parentWidth: 親要素のwidth('px'はつけずに数値だけ)
+// @return px->percentに変換した数値
+@function percent($px, $parentWidth) {
+	@return calc($px / $parentWidth * 100%) ;
+}
+
+// 横並び要素の横幅を求める
+// @param numItems: 横並びにする要素の数
+// @param margin: 横並びにする要素間の余白
+// @return 要素一つ分のwidth
+@function calcItemWidth($numItems, $margin) {
+	$oneItemWidth: math.div(100%, $numItems);
+	$assignedMargin: $margin * math.div(($numItems - 1), $numItems);
+	@return calc(#{$oneItemWidth} - #{$assignedMargin});
+}
+
+// line-heightを求める
+// @param　line-spacing
+// @param font-size
+@function calcLineHeight($lineSpacing, $fontSize) {
+	@return calc(#{$lineSpacing} / #{$fontSize});
+}

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+.flex {
+  flex-wrap: wrap;
+  // ネガティブマージンを設定することで、.flex-itemのgutterを相殺する
+  margin: calc(var(--vertical-gutter) / 2 * -1) calc(var(--horizontal-gutter) / 2 * -1);
+  --vertical-gutter: 20rem;
+  @include atQuery(sm) {
+    --vertical-gutter: 32rem;
+  }
+
+  // modifierがついていなければ常時flex
+  &:not(._for-pc):not(._for-sm) {
+    display: flex;
+  }
+
+  // modifier | columns
+  &._2col {
+    --horizontal-gutter: 28rem;
+    --numItems: 2;
+  }
+
+  &._3col {
+    --horizontal-gutter: 28rem;
+    --numItems: 3;
+  }
+
+  &._4col {
+    --horizontal-gutter: 28rem;
+    --numItems: 4;
+  }
+
+  &._5col {
+    --horizontal-gutter: 26rem;
+    --numItems: 5;
+  }
+
+  // modifier | break points
+  // pcサイズのみflex
+  &._for-pc {
+    @include atQuery(md) {
+      display: flex;
+    }
+
+    @include atQuery(sm) {
+      --vertical-gutter: 0;
+      --horizontal-gutter: 0;
+
+      > .flex-item {
+        --vertical-gutter: 0;
+        --horizontal-gutter: 0;
+      }
+    }
+  }
+
+  &._for-sm {
+    @include atQuery(sm) {
+      display: flex;
+    }
+
+    @include atQuery(md) {
+      --vertical-gutter: 0;
+      --horizontal-gutter: 0;
+
+      > .flex-item {
+        --vertical-gutter: 0;
+        --horizontal-gutter: 0;
+      }
+    }
+  }
+
+  // modifier | smallメディアでの表示数
+  &._sm-2col {
+    @include atQuery(sm) {
+      --horizontal-gutter: 20rem;
+      --numItems: 2;
+    }
+  }
+
+  &._sm-3col {
+    @include atQuery(sm) {
+      --horizontal-gutter: 20rem;
+      --numItems: 3;
+    }
+  }
+}
+
+.flex > .flex-item {
+  margin: calc(var(--vertical-gutter) / 2) calc(var(--horizontal-gutter) / 2);
+  // 親要素のガター相殺のためのネガティブマージンも考慮して、カードひとつの分のwidthを計算
+  width: calc((100% - var(--horizontal-gutter)) / var(--numItems) - var(--horizontal-gutter) * (var(--numItems) - 1) / var(--numItems));
+}

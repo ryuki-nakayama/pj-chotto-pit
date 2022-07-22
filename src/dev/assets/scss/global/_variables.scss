@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+// color
+$color-base: #000;
+$color-primary: #062C70;
+$color-secondary: #3B3E43;
+$color-tertiary: lime;
+$color-link: blue;
+$color-caution: red;
+$color-white: white;
+$color-black: black;
+
+// background color
+$bg-color-base: white;
+$bg-color-primary: gray;
+$bg-color-secondary: silver;
+$bg-color-tertiary: maroon;
+
+// border
+$border-base: max(1rem, 1px) solid black;
+
+// art board width - pxはつけない
+$canvas-width-pc: 1280;
+$canvas-width-sm: 390;
+
+// contents width
+// デザインカンプの垂直ガイド線の幅
+$contents-width: 980px;
+$contents-width-sm: 1000px;
+$contents-width-lg: 1400px;
+$contents-width-sm: 350px;
+$contents-width--no-unit: 980;
+$contents-width-sm--no-unit: 350;
+
+// padding
+// bodyの左右padding
+$padding-pc--no-unit: 40; // デザインカンプの値を設定(pxなし)
+$padding-sm--no-unit: 20; // デザインカンプの値を設定(pxなし)
+$padding-pc: 40rem; // デザインカンプの値をremで設定
+$padding-pc--px: 40px; // デザインカンプの値をpxで設定
+$padding-sm: 20rem;
+
+// container width
+// contents width + padding
+// 垂直ガイド線内の要素を囲う
+$container-width: calc($contents-width + $padding-pc * 2);
+$container-width-sm: calc($contents-width-sm + $padding-pc * 2);
+$container-width-lg: calc($contents-width-lg + $padding-pc * 2);
+$container-width--no-unit: calc($contents-width--no-unit + $padding-pc--no-unit * 2);
+$container-width-sm--no-unit: calc($contents-width-sm--no-unit + $padding-sm--no-unit * 2);
+
+// height
+$header-height: 78rem;
+$header-height-sm: 107rem;
+
+// layer
+$layer-header: 50;
+$layer-loading: 40;
+$layer-modal: 30;
+$layer-original-select: 20;
+$layer-floating: 10;
+$layer-default: 1;
+
+// breakpoints
+$viewport-increment: 1px;
+$xs: 576px;
+$sm: 768px;
+$tab: calc($contents-width + $padding-pc--px * 2);
+$md: 769px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: $canvas-width-pc + $viewport-increment;
+$breakpoints: (
+	'xs': '(max-width: #{$xs})',
+	'sm': '(max-width: #{$sm})',
+	'tab': '(max-width: #{$tab})',
+	'md': '(min-width: #{$md})',
+	'lg': '(min-width: #{$lg})',
+	'xl': '(min-width: #{$xl})',
+	'xxl': '(min-width: #{$xxl})',
+);
+
+// font-family
+$ff-base: "Hiragino Sans", "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", sans-serif;
+// $ff-title: "Futura", sans-serif;
+// $ff-serif: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", serif;
+// $ff-sans: "Hiragino Sans", "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", sans-serif;
+// $ff-ja: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", serif;
+$ff-en: "blambot-fx-pro", sans-serif;
+
+// font-size
+$fs-root: 1px;
+$fs-base: 16rem;
+$fs-base-sm: 14rem;
+
+// font-weight
+$fw-ex: 200;
+$fw-l: 300;
+$fw-r: 400;
+$fw-m: 500;
+$fw-sb: 600;
+$fw-b: 700;
+
+// animation
+$hover-opacity: 0.7;
+$transition-duration: .5s;
+$transition-timing-function: cubic-bezier(0.65, 0, 0.076, 1);

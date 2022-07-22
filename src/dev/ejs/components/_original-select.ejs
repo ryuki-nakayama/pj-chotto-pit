@@ -1,0 +1,42 @@
+<!-- Original Selectbox -->
+
+<link rel="stylesheet" href="<%= path %>css/component/original-select.css">
+
+<!-- .js-originalSelectのdata-locking-selectには、連動させるselectのid名を設定する -->
+<div id="js-originalSelect" class="js-originalSelect original-select" data-locking-select="js-select">
+
+  <!-- フロント非表示 | 機能面では下記のselectを使用し、フロントにはoriginal-selectを表示する -->
+  <select name="select" id="js-select" class="js-functionSelect hidden">
+    <option value="one">1</option>
+    <option value="two">2</option>
+    <option value="three">3</option>
+  </select>
+
+  <!-- 選択中オプション | オプションリストの表示/非表示切り替えボタン -->
+  <!-- .js-originalSelectBtnのdata-maskには、連動させるマスク(.js-originalSelectMask)のid名を設定する -->
+  <!-- .js-originalSelectBtnのaria-controlsには、連動させるオプションリスト(.js-originalSelectOptions)のid名を設定する -->
+  <button type="button" id="js-originalSelectBtn" class="js-originalSelectBtn original-select__btn" data-mask="js-originalSelectMask" aria-expanded="false" aria-controls="js-originalSelectOptions">
+    1
+  </button>
+
+  <!-- オプション一覧 | .js-originalSelectBtnをクリックで表示 -->
+  <!-- .js-originalSelectOptionsのdata-parentには、親要素(.js-originalSelect)のid名を設定する -->
+  <!-- .js-originalSelectOptionsのdata-option-buttonには、兄弟要素の.js-originalSelectBtnのid名を設定する -->
+  <ul id="js-originalSelectOptions" class="js-originalSelectOptions original-select__options" aria-hidden="true" data-parent="js-originalSelect" data-option-button="js-originalSelectBtn">
+    <li class="js-originalSelectOption original-select__option _selected" data-option="one" data-selected="true" data-value="1">
+      <span class="original-select__option-inner">1<img src="<%= path %>img/common/icon-check.svg" alt="check"></span>
+    </li>
+    <li class="js-originalSelectOption original-select__option" data-option="two" data-selected="false" data-value="2">
+      <span class="original-select__option-inner">2<img src="<%= path %>img/common/icon-check.svg" alt="check"></span>
+    </li>
+    <li class="js-originalSelectOption original-select__option" data-option="three" data-selected="false" data-value="3">
+      <span class="original-select__option-inner">3<img src="<%= path %>img/common/icon-check.svg" alt="check"></span>
+    </li>
+  </ul>
+
+  <!-- 画面全体にマスクをかけて、クリックされたらオプションを閉じる | 対応する.js-originalSelectOptionsが表示されているときのみdisplay: block -->
+  <!-- data-option-buttonには、兄弟要素の.js-originalSelectBtnのid名を設定する -->
+  <div id="js-originalSelectMask" class="js-originalSelectMask original-select__mask" data-option-button="js-originalSelectBtn" aria-hidden="true"></div>
+</div>
+
+<script src="<%= path %>js/original-select.js?ver" defer="defer"></script>

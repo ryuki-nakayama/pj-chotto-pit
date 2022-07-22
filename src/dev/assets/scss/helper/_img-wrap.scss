@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* img-wrap
+--------------------------------------------------*/
+// アスペクト比を一定に保つために使用する
+// 背景画像とする場合、中身の要素に.imgを付与。background-imageはHTMLに直接styleでで指定する
+//.img-wrapのpadding-topにアスペクト比を指定する
+.img-wrap {
+  display: block;
+  position: relative;
+
+  img,
+  .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+// サイト共通stylesheet
+// 全ページで使用するコンポーネントやヘルパークラス
+
+// common
+@use './common/index';
+
+// helper
+@use './helper';
+
+// components
+@use './components/sample-snippets';
+
+// layouts
+@use './layouts/header';
+@use './layouts/footer';
+
+// sections
+// @use './sections/sample-section';

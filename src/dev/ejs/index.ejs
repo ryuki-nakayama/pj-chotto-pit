@@ -1,0 +1,175 @@
+<% var title = 'トップページのタイトル'; %> <%# ページタイトル %>
+<% var description = 'トップページのディスクリプション'; %> <%# ページディスクリプション %>
+<% var path = './'; %> <%# ページディレクトリ %>
+<% var pageName = 'top-page'; %> <%# ページ名 | bodyタグにここで指定したクラスが付与される | Block要素とのクラス名衝突を避けるため、〇〇-pageといったクラス名を推奨 %>
+
+<%# ヘッダーコンポーネントの読み込み %>
+<%- include(path + 'layouts/_header.ejs', {
+  title: title,
+  description: description,
+  path: path,
+  pageName: pageName,
+}); %>
+
+<%# hero-imgコンポーネントの読み込み %>
+<%- include(path + 'sections/_hero-img.ejs', {
+  path: path,
+  imgDir: 'index/hero-img.jpeg',
+  text: 'TOP TITLE'
+}); %>
+
+<!-- Start main -->
+<main class="js-main main">
+
+  <!-- Start original-select -->
+  <div class="container">
+    <div class="original-select-wrap" style="max-width: 400rem; margin-top: 40rem">
+      <%- include(path + 'components/_original-select', { path: path }); %>
+    </div>
+  </div>
+
+  <!-- Start section1 -->
+  <section id="section1" class="section section1">
+    <div class="container">
+      <h2 class="section__title">flex 2 col</h2>
+      <div class="flex flex--2-col">
+        <p class="flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start section2 -->
+  <section id="section2" class="section section2">
+    <div class="container">
+      <h2 class="section__title">flex 2 col PC</h2>
+      <div class="flex flex--md flex--2-col">
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start section3 -->
+  <section id="section3" class="section section3">
+    <div class="container">
+      <h2 class="section__title">flex 3 col PC</h2>
+      <div class="flex flex--md flex--3-col">
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start section4 -->
+  <section id="section4" class="section section4">
+    <div class="container">
+      <h2 class="section__title">flex 4 col PC</h2>
+      <div class="flex flex--md flex--4-col">
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+        <p class="js-anime anime-fadeInUp flex-item">
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+          text text text text text text text text text text text text
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start section5 -->
+  <section id="section5" class="section section5">
+    <div class="container">
+      <div class="common-block bg-cr-primary">
+        <h2 class="section__title">Common Block</h2>
+        <p class="js-anime anime-fadeInUp ">
+          text text text text text text text text text text text text<br>
+          text text text text text text text text text text text text<br>
+          text text text text text text text text text text text text<br>
+          text text text text text text text text text text text text<br>
+          text text text text text text text text text text text text<br>
+          text text text text text text text text text text text text<br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%# フッターコンポーネントの読み込み %>
+<%- include(path + 'layouts/_footer', {path: path}); %>

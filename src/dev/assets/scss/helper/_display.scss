@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* diaplay
+--------------------------------------------------*/
+.for-sm {
+  @include atQuery(md) {
+    display: none !important;
+  }
+}
+
+.for-pc {
+  @include atQuery(sm) {
+    display: none !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+}

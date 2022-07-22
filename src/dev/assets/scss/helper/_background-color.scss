@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* background-color
+--------------------------------------------------*/
+.bg-cr-primary {
+  background-color: g.$bg-color-primary !important;
+}
+
+.bg-cr-secondary {
+  background-color: g.$bg-color-secondary !important;
+}
+
+.bg-cr-tertiary {
+  background-color: g.$bg-color-tertiary !important;
+}

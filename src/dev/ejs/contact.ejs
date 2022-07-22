@@ -1,0 +1,103 @@
+<% var title = 'コンタクトページのタイトル'; %> <%# ページタイトル %>
+<% var description = 'コンタクトページのディスクリプション'; %> <%# ページディスクリプション %>
+<% var path = './'; %> <%# ページディレクトリ %>
+<% var pageName = 'contact-page'; %> <%# ページ名 | bodyタグにここで指定したクラスが付与される %>
+
+<%# ヘッダーコンポーネントの読み込み %>
+<%- include(path + 'layouts/_header.ejs', {
+  title: title,
+  description: description,
+  path: path,
+  pageName: pageName,
+}); %>
+
+<%# パンくずリストコンポーネントの読み込み %>
+<%- include (path + 'layouts/_breadcrumb', {page: pageName} ); %>
+
+<!-- Start main -->
+<main class="js-main main">
+
+  <!-- Start contact -->
+  <section class="contact section">
+    <div class="container">
+      <h1 class="section__title">お問い合わせ</h1>
+      <div class="contact__box">
+
+        <!-- Start form -->
+        <form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSfIbD-DqJI2zKOgdtVUOKnC6DQV4npml0MfoTrjQMSlJqY75A/formResponse" class="js-form contact__form form">
+          <div class="form__block">
+            <dl class="form__items">
+
+              <!-- form-item type -->
+              <div class="form__form-item form-item">
+                <dt class="form-item__label">お問い合わせ内容<span class="required">※必須</span></dt>
+                <dd class="form-item__input is-radio">
+                  <input id="contact-type--request" class="js-required" type="radio" name="entry.1334318016" value="資料請求" required>
+                  <label for="contact-type--request">資料請求</label>
+                  <input id="contact-type--contact" class="js-required" type="radio" name="entry.1334318016" value="お問い合わせ" required>
+                  <label for="contact-type--contact">お問い合わせ</label>
+                </dd>
+              </div>
+
+              <!-- form-item name -->
+              <div class="form__form-item form-item">
+                <dt class="form-item__label"><label for="name">お名前<span class="required">※必須</span></label></dt>
+                <dd class="form-item__input"><input id="name" type="text" class="js-required border-base" name="entry.1353329237" data-error="お名前を入力してください" required></dd>
+              </div>
+
+              <!-- form-item tel -->
+              <div class="form__form-item form-item">
+                <dt class="form-item__label"><label for="tel">お電話番号</label></dt>
+                <dd class="form-item__input"><input id="tel" type="tel" class="border-base" name="entry.4100809"></dd>
+              </div>
+
+              <!-- form-item email -->
+              <div class="form__form-item form-item">
+                <dt class="form-item__label"><label for="email">メールアドレス<span class="required">※必須</span></label></dt>
+                <dd class="form-item__input"><input id="email" type="email" class="js-required border-base" name="emailAddress" data-error="メールアドレスを入力してください" required></dd>
+              </div>
+
+              <!-- form-item message -->
+              <div class="form__form-item form__form-item--textarea form-item">
+                <dt class="form-item__label"><label for="message">お問合せ内容<span class="required">※必須</span></label></dt>
+                <dd class="form-item__input"><textarea id="message" class="js-required  border-base" name="entry.846703680" cols="30" rows="7" data-error="内容を入力してください" required></textarea></dd>
+              </div>
+
+            </dl>
+
+            <!-- privacy -->
+            <div class="form__privacy privacy">
+              <div class="privacy__cont">
+                <input type="checkbox" id="your-privacy" name="your-privacy" required>
+                <label class="privacy__label" for="your-privacy"><p class="privacy__text"><a href="#" class="privacy__link underline hover-opacity">プライバシーポリシー</a>を確認した上で送信する。</p></label>
+              </div>
+              <p class="privacy__text">（同意頂けない場合は送信できません。必ずチェックをして下さい。）</p>
+            </div>
+
+            <!-- btns -->
+            <div class="form__btns">
+              <button class="common-btn common-btn--reset" type="reset"><span>リセット</span></button>
+              <button class="js-submitBtn common-btn common-btn--submit" type="submit"><span>送&emsp;信</span></button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- Start send-msg -->
+        <div class="js-sendMsg form__send-msg send-msg" style="display: none;">
+          <h2 class="send-msg__title">お問い合わせが完了しました</h2>
+          <p class="send-msg__text">
+            この度はお問い合わせいただき誠に有難うございます。<br>
+            後日、担当者よりご連絡をいたしますので、少々お待ちくださいませ。<br>
+            1週間以内に返信がない場合は送信エラーの可能性がございますので、お手数ですが再度送信いただけます様お願いいたします。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%# フッターコンポーネントの読み込み %>
+<%- include(path + 'layouts/_footer', {path: path}); %>

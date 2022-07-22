@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* base
+--------------------------------------------------*/
+html {
+	touch-action: manipulation; // スマホ - ダブルタップで画像をダブルタップしても拡大をさせない
+	font-size: g.$fs-root;
+	@include g.atQuery(tab) {
+		font-size: calc(100vw / g.$container-width--no-unit);
+	}
+	@include g.atQuery(sm) {
+		font-size: calc(100vw / g.$container-width-sm--no-unit);
+	}
+}
+
+// Adobe Fontsを使用する場合下記のコメントアウトをアクティブにする
+// ページ読み込み時の一瞬のちらつきをなくす
+// html {
+// 	visibility: hidden;
+// }
+
+// html.wf-active,
+// html.loading-delay {
+// 	visibility: visible;
+// }
+
+body {
+	position: relative;
+	font-family: g.$ff-base;
+	font-size: g.$fs-base;
+	color: g.$color-base;
+	font-weight: 300;
+	background-color: g.$bg-color-base;
+	letter-spacing: 0;
+	line-height: g.calcLineHeight(24, 16);;
+	overflow-x: hidden;
+	overflow-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	padding-top: g.$header-height;
+	@include g.atQuery(sm) {
+		font-size: g.$fs-base-sm;
+		padding-top: g.$header-height-sm;
+	}
+
+	&._scrollLock {
+		overflow: hidden;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+	touch-action:manipulation;
+}
+
+a {
+	cursor: pointer;
+	display: inline-block;
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* hover
+--------------------------------------------------*/
+.hover-opacity {
+  @include g.transition('opacity');
+
+  &:hover {
+    opacity: g.$hover-opacity !important;
+  }
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: .3em;
+  }
+}

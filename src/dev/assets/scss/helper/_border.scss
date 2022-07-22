@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* border
+--------------------------------------------------*/
+.border-base {
+  border: g.$border-base;
+}
+
+.border-caution {
+  border: g.$border-base;
+  border-color: g.$color-caution;
+}

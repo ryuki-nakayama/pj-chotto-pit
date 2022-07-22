@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use '../global' as g;
+
+/* section
+--------------------------------------------------*/
+.section {
+  padding: 40rem 0;
+  @include g.atQuery(sm) {
+    padding: 20rem 0;
+  }
+}

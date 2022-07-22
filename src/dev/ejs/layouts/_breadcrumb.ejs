@@ -1,0 +1,25 @@
+<%# src/dev/assets/json/breadcrumb.jsonを編集 %>
+
+<!-- Start breadcrumb -->
+<%_ if (Object.keys(breadcrumb[page]).length > 0) { _%>
+  <div class="breadcrumb">
+    <div class="container">
+
+      <!-- list -->
+      <ol class="breadcrumb__list">
+        <%_ for (var i = 0; i < Object.keys(breadcrumb[page].text).length; i++) { _%>
+          <%_ if (i + 1 === Object.keys(breadcrumb[page].text).length) { _%>
+            <li>
+              <span><%- breadcrumb[page].text[i] %></span>
+            </li>
+          <%_ } else { _%>
+            <li>
+              <a href="<%- breadcrumb[page].directory[i] %>"><%- breadcrumb[page].text[i] %></a>
+            </li>
+          <%_ } _%>
+        <%_ } _%>
+      </ol>
+
+    </div>
+  </div>
+<%_ } _%>
