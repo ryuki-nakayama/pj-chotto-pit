@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* hero-img
+--------------------------------------------------*/
+.hero-img {
+  position: relative;
+}
+
+.hero-img__title-img {
+  max-width: 32.083333vw;
+  width: 100%;
+  @include posCenter(xy);
+}
