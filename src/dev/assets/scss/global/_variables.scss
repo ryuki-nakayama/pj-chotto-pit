@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 // color
-$color-base: #000;
-$color-primary: #062C70;
+$color-base: #231815;
+$color-primary: #E95736;
 $color-secondary: #3B3E43;
 $color-tertiary: lime;
 $color-link: blue;
@@ -12,33 +12,33 @@ $color-black: black;
 
 // background color
 $bg-color-base: white;
-$bg-color-primary: gray;
-$bg-color-secondary: silver;
-$bg-color-tertiary: maroon;
+$bg-color-primary: #EAB624;
+$bg-color-secondary: #DDDDDD;
+$bg-color-tertiary: #FFDB43;
 
 // border
-$border-base: max(1rem, 1px) solid black;
+$border-base: max(3.82rem, 3.82px) solid #131313;
 
 // art board width - pxはつけない
-$canvas-width-pc: 1280;
-$canvas-width-sm: 390;
+$canvas-width-pc: 1920;
+$canvas-width-sm: 680;
 
 // contents width
 // デザインカンプの垂直ガイド線の幅
-$contents-width: 980px;
-$contents-width-sm: 1000px;
+$contents-width: 1000px;
+$contents-width-sm: 928px;
 $contents-width-lg: 1400px;
-$contents-width-sm: 350px;
-$contents-width--no-unit: 980;
-$contents-width-sm--no-unit: 350;
+$contents-width-sm: 536px;
+$contents-width--no-unit: 928;
+$contents-width-sm--no-unit: 536;
 
 // padding
 // bodyの左右padding
 $padding-pc--no-unit: 40; // デザインカンプの値を設定(pxなし)
-$padding-sm--no-unit: 20; // デザインカンプの値を設定(pxなし)
+$padding-sm--no-unit: 32; // デザインカンプの値を設定(pxなし)
 $padding-pc: 40rem; // デザインカンプの値をremで設定
 $padding-pc--px: 40px; // デザインカンプの値をpxで設定
-$padding-sm: 20rem;
+$padding-sm: 32rem;
 
 // container width
 // contents width + padding
@@ -50,8 +50,8 @@ $container-width--no-unit: calc($contents-width--no-unit + $padding-pc--no-unit 
 $container-width-sm--no-unit: calc($contents-width-sm--no-unit + $padding-sm--no-unit * 2);
 
 // height
-$header-height: 78rem;
-$header-height-sm: 107rem;
+$header-height: 130rem;
+$header-height-sm: 135rem;
 
 // layer
 $layer-header: 50;
@@ -82,16 +82,12 @@ $breakpoints: (
 
 // font-family
 $ff-base: "Hiragino Sans", "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", sans-serif;
-// $ff-title: "Futura", sans-serif;
-// $ff-serif: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", serif;
-// $ff-sans: "Hiragino Sans", "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", sans-serif;
-// $ff-ja: "Hiragino Mincho ProN", "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro", serif;
 $ff-en: "blambot-fx-pro", sans-serif;
 
 // font-size
 $fs-root: 1px;
-$fs-base: 16rem;
-$fs-base-sm: 14rem;
+$fs-base: 22rem;
+$fs-base-sm: 30rem;
 
 // font-weight
 $fw-ex: 200;
