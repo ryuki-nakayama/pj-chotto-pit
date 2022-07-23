@@ -37,10 +37,8 @@ body {
 	overflow-x: hidden;
 	overflow-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
-	padding-top: g.$header-height;
 	@include g.atQuery(sm) {
 		font-size: g.$fs-base-sm;
-		padding-top: g.$header-height-sm;
 	}
 
 	&._scrollLock {

@@ -3,3 +3,15 @@
 
 /* header
 --------------------------------------------------*/
+.header {
+  height: $header-height;
+  @include flexCenter(xy);
+  @include atQuery(sm) {
+    height: $header-height-sm;
+  }
+}
+
+.header__logo {
+  max-width: 292rem;
+  margin: 0 auto;
+}
