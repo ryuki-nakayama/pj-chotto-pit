@@ -4,5 +4,94 @@
 /* service
 --------------------------------------------------*/
 .service {
+  background-color: #FFDB43;
+  padding: 60rem 0 100rem;
+  position: relative;
+  @include atQuery(sm) {
+    padding: 115rem 0 70rem;
+  }
+}
 
+.service__bg-text-wrapper {
+  max-width: 43.333333vw;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include atQuery(sm) {
+    max-width: 94vw;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.service__title {
+  max-width: 363rem;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  @include atQuery(sm) {
+    max-width: 333rem;
+  }
+}
+
+.service__list {
+  margin-top: 40rem;
+  @include flexAtQuery(md) {
+    margin-left: -33rem;
+    margin-right: -33rem;
+  }
+  @include atQuery(sm) {
+    margin-top: 45rem;
+  }
+}
+
+.service__item {
+  position: relative;
+  @include atQuery(md) {
+    margin: 0 33rem;
+    flex: 1;
+  }
+  @include atQuery(sm) {
+    @include notFirst() {
+      margin-top: 155rem;
+    }
+  }
+
+  &:last-of-type {
+    .service__arrow {
+      display: none;
+    }
+  }
+
+  .img-wrap {
+    padding-top: 65.051903%;
+  }
+}
+
+.service__text {
+  margin-top: 20rem;
+  font-size: 20rem;
+  @include atQuery(sm) {
+    font-size: 30rem;
+    margin-top: 25rem;
+    text-align: center;
+  }
+}
+
+.service__arrow {
+  max-width: 56rem;
+  position: absolute;
+  @include atQuery(md) {
+    top: 20%;
+    right: 0;
+    transform: translateX(110%);
+  }
+  @include atQuery(sm) {
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    max-width: 82rem;
+  }
 }
