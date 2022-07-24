@@ -12,7 +12,7 @@
 }); %>
 
 <%# hero-imgコンポーネントの読み込み %>
-<%- include(path + 'sections/_hero-img.ejs', {
+<%- include(path + 'sections/_hero-img', {
   path: path,
   imgDir: 'index/hero-img.jpeg',
   text: 'TOP TITLE'
@@ -20,6 +20,8 @@
 
 <!-- Start main -->
 <main class="js-main main">
+
+  <%- include(path + 'sections/_about', { path: path }); %>
 
   <!-- Start original-select -->
   <div class="container">
