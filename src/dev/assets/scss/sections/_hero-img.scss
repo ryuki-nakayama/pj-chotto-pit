@@ -21,5 +21,6 @@
   @include atQuery(sm) {
     top: 100%;
     max-width: 62.058824vw;
+    z-index: 1;
   }
 }
