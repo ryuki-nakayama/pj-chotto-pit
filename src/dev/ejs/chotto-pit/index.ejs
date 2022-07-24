@@ -11,7 +11,7 @@
   pageName: pageName,
 }); %>
 
-<%# hero-imgコンポーネントの読み込み %>
+<!-- Start hero-img -->
 <%- include(path + 'sections/_hero-img', {
   path: path,
   imgDir: 'index/hero-img.jpeg',
@@ -21,7 +21,11 @@
 <!-- Start main -->
 <main class="js-main main">
 
+  <!-- Start about -->
   <%- include(path + 'sections/_about', { path: path }); %>
+
+  <!-- Start service -->
+  <%- include(path + 'sections/_service', { path: path }); %>
 
   <!-- Start original-select -->
   <div class="container">
