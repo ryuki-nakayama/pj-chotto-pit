@@ -26,15 +26,15 @@
   }
 }
 
-.service__title {
-  max-width: 363rem;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  @include atQuery(sm) {
-    max-width: 333rem;
-  }
-}
+// .service__title {
+//   max-width: 363rem;
+//   width: 100%;
+//   margin: 0 auto;
+//   position: relative;
+//   @include atQuery(sm) {
+//     max-width: 333rem;
+//   }
+// }
 
 .service__list {
   margin-top: 40rem;
