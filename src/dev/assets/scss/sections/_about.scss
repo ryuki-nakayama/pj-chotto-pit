@@ -16,7 +16,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 42.395833vw;
+  max-width: min(42.395833vw, 814rem);
   width: 100%;
   @include atQuery(sm) {
     max-width: 566rem;
@@ -42,8 +42,8 @@
     top: 50%;
     left: 0;
     display: block;
-    width: 12vw;
-    height: 12vw;
+    width: min(12vw, 215rem);
+    height: min(12vw, 215rem);
     background-color: white;
     border-radius: 50%;
     transform: translateY(-50%);
