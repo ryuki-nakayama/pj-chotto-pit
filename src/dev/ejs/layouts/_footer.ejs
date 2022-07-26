@@ -1,17 +1,24 @@
-	<!-- Start footer -->
-	<footer class="js-footer footer">
-		<div class="container">
+	<footer class="footer">
+		<div class="footer__content">
 
-			<!-- copyright -->
-			<p class="footer__copyright"><small lang="en" class="ff-en">&copy;2022 LIBELUS.</small></p>
+			<div class="footer__element footer__tel">
+				<a href="">
+					<img src="<%= path %>img/footer-tel.png" alt="ちょっとピット事業部 0120-730-230">
+				</a>
+			</div>
+
+			<div class="footer__element footer__register">
+				<a href="">
+					加盟店登録<span class="text-sm">はこちら</span>
+				</a>
+			</div>
 
 		</div>
 	</footer>
 
-	<!-- Start to-top -->
-	<button type="button" id="js-toTop" class="to-top" aria-hidden="true">
-		<span class="to-top__contents">TOP</span>
-	</button>
+		<!-- <button type="button" id="js-toTop" class="to-top" aria-hidden="true">
+			<span class="to-top__contents">TOP</span>
+		</button> -->
 
 	<!-- Start script -->
 	<%- include('../common/_script', {path: path}); %>
