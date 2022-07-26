@@ -5,19 +5,19 @@
     <h2 class="feature__title">
       初期費用、固定経費完全
       <img src="<%= path %>img/text-zero.png" alt="0">
-      円！
+      <span class="text-sm">円！</span>
     </h2>
 
     <%# trouble-solving %>
     <div class="feature__trouble-solving">
       <div class="feature__trouble-solving-img"><img src="<%= path %>img/feature1.png" alt="お悩み解決のお手伝い！"></div>
       <ul class="feature__trouble-solving-list">
-        <li class="feature__trouble-solving-item">新規顧客獲得と機会の創出！</li>
-        <li class="feature__trouble-solving-item">取り扱いラインナップの充実！</li>
-        <li class="feature__trouble-solving-item">完全予約制で効率アップ！</li>
-        <li class="feature__trouble-solving-item">店舗の認知度アップ！</li>
-        <li class="feature__trouble-solving-item">仕入価格の低減！</li>
-        <li class="feature__trouble-solving-item">売上の向上！</li>
+        <li class="feature__trouble-solving-item"><img src="<%= path %>img/feature-icon.png" alt="" class="icon">新規顧客獲得と機会の創出！</li>
+        <li class="feature__trouble-solving-item"><img src="<%= path %>img/feature-icon.png" alt="" class="icon">取り扱いラインナップの充実！</li>
+        <li class="feature__trouble-solving-item"><img src="<%= path %>img/feature-icon.png" alt="" class="icon">完全予約制で効率アップ！</li>
+        <li class="feature__trouble-solving-item"><img src="<%= path %>img/feature-icon.png" alt="" class="icon">店舗の認知度アップ！</li>
+        <li class="feature__trouble-solving-item"><img src="<%= path %>img/feature-icon.png" alt="" class="icon">仕入価格の低減！</li>
+        <li class="feature__trouble-solving-item"><img src="<%= path %>img/feature-icon.png" alt="" class="icon">売上の向上！</li>
       </ul>
     </div>
 
@@ -43,23 +43,39 @@
       </ul>
     </div>
 
+    <%# item %>
     <div class="feature__item">
-      <h2 class="feature__item-title">更に！販売アイテムの充実</h2>
+
+      <h2 class="feature__item-title">
+        <span class="feature__item-title-inner">
+          更に！販売アイテムの充実
+        </span>
+      </h2>
+
       <div class="feature__item-content">
-        <div class="feature__item-img">
-          <img src="<%= path %>img/feature2.png" alt="会員サイトイメージ">
-          <p class="feature__item-footer-text">会員サイトイメージ</p>
+
+        <div class="feature__item-img-wrapper">
+          <div class="feature__item-img">
+            <img src="<%= path %>img/feature2.png" alt="会員サイトイメージ">
+            <p class="feature__item-footer-text">会員サイトイメージ</p>
+          </div>
+          <div class="feature__item-merchant-img for-sm">
+            <img src="<%= path %>img/feature3.png" alt="ちょっとピット加盟店ステッカーイメージ">
+            <p class="feature__item-footer-text">加盟店認証ステッカーイメージ</p>
+          </div>
         </div>
+
         <div class="feature__item-merchant">
           <p class="feature__item-merchant-text">
             加盟店専用サイトより、弊社取扱の新品商品及びUSED商品の購入も可能。<br>
             オリジナルブランド「ALLENCOUNTER」シリーズも加盟店価格でご提供！
           </p>
-          <div class="feature__item-merchant-img">
+          <div class="feature__item-merchant-img for-pc">
             <img src="<%= path %>img/feature3.png" alt="ちょっとピット加盟店ステッカーイメージ">
           </div>
-          <p class="feature__item-footer-text">加盟店認証ステッカーイメージ</p>
+          <p class="feature__item-footer-text for-pc">加盟店認証ステッカーイメージ</p>
         </div>
+
       </div>
     </div>
 
