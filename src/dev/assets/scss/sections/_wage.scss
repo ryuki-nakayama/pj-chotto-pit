@@ -22,7 +22,7 @@
   position: absolute;
   top: 25%;
   left: 50%;
-  max-width: 1033rem;
+  max-width: min(1033rem, 95%);
   width: 100%;
   transform: translateX(-50%);
   @include atQuery(sm) {

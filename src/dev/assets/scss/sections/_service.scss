@@ -13,7 +13,7 @@
 }
 
 .service__bg-text-wrapper {
-  max-width: 43.333333vw;
+  max-width: min(43.333333vw, 832rem);
   width: 100%;
   position: absolute;
   top: 0;
@@ -25,16 +25,6 @@
     transform: translateX(-50%);
   }
 }
-
-// .service__title {
-//   max-width: 363rem;
-//   width: 100%;
-//   margin: 0 auto;
-//   position: relative;
-//   @include atQuery(sm) {
-//     max-width: 333rem;
-//   }
-// }
 
 .service__list {
   margin-top: 40rem;

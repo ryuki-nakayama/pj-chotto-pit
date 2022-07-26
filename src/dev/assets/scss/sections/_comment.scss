@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* comment
+--------------------------------------------------*/
+.comment {
+  background-color: #EAB624;
+  position: relative;
+  padding: 80rem 0 110rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include atQuery(sm) {
+    padding: 100rem 0;
+    background-image: none !important;
+  }
+
+  .section__title {
+    @include atQuery(sm) {
+      font-size: 44rem;
+    }
+  }
+}
+
+.comment__bg-text-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: min(51.458333vw, 988rem);
+  width: 100%;
+  @include atQuery(sm) {
+    max-width: 672rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.comment__list {
+  margin-top: 32rem;
+  @include atQuery(sm) {
+    margin-top: 40rem;
+  }
+}
+
+.comment__item {
+  background-color: white;
+  border-radius: 17.28rem;
+  padding: 32rem 20rem 20rem;
+  box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: .3);
+  @include flexAtQuery(md) {}
+  @include atQuery(sm) {
+    padding: 76rem 65rem 50rem;
+  }
+
+  @include notFirst() {
+    margin-top: 20rem;
+    @include atQuery(sm) {
+      margin-top: 32rem;
+    }
+  }
+}
+
+.comment__thumb {
+  width: 410rem;
+  position: relative;
+  @include atQuery(md) {
+    padding-top: 30rem;
+  }
+
+  .img-wrap {
+    padding-top: 70%;
+  }
+}
+
+.comment__label {
+  position: absolute;
+  background-color: #EAB624;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  font-size: 36rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  padding: 8rem 40rem;
+  white-space: nowrap;
+  @include atQuery(sm) {
+    top: -10%;
+  }
+}
+
+.comment__comment {
+  flex: 1;
+  position: relative;
+  @include atQuery(md) {
+    margin-left: 28rem;
+  }
+  @include atQuery(sm) {
+    margin-top: 36rem;
+  }
+}
+
+.comment__title {
+  font-size: 32rem;
+  font-weight: 700;
+  letter-spacing: .025em;
+  line-height: calcLineHeight(42.8, 32.24);
+  @include atQuery(sm) {
+    font-size: 30rem;
+    letter-spacing: 0;
+    line-height: calcLineHeight(42.8, 30);
+  }
+}
+
+.comment__text {
+  font-size: 20rem;
+  line-height: calcLineHeight(30, 20);
+  margin-top: 23rem;
+  @include atQuery(sm) {
+    margin-top: 15rem;
+    line-height: calcLineHeight(38, 20);
+  }
+}
+
+.comment__merchant {
+  font-size: 24rem;
+  letter-spacing: .075em;
+  font-weight: 700;
+  @include atQuery(md) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @include atQuery(sm) {
+    text-align: right;
+    margin-top: 16rem;
+  }
+}
