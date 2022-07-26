@@ -11,6 +11,9 @@
   width: 100%;
   border-radius: 55rem;
   font-weight: 700;
+  @include atQuery(sm) {
+    font-size: 24rem;
+  }
 
   // modifier background color
   &._yellow {
