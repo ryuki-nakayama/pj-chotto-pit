@@ -6,6 +6,9 @@
 .company {
   background-color: #DDDDDD;
   padding: 68rem 0 47rem;
+  @include atQuery(sm) {
+    padding: 74rem 0 30rem;
+  }
 }
 
 .company__content {
@@ -15,6 +18,7 @@
   line-height: calcLineHeight(52, 30);
   @include atQuery(sm) {
     font-size: 24rem;
+    line-height: calcLineHeight(42, 24);
   }
 }
 
@@ -29,4 +33,7 @@
   font-weight: 700;
   text-align: center;
   letter-spacing: .075em;
+  @include atQuery(sm) {
+    margin-top: 126rem;
+  }
 }
