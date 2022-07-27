@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* to-top
+--------------------------------------------------*/
+.to-top {
+  width: 140rem;
+  height: 140rem;
+  position: fixed;
+  bottom: 24rem;
+  right: 150rem;
+  background-color: black;
+  border: max(5rem, 5px) solid white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.to-top__icon {
+  font-size: 0;
+}
+
+.to-top__text {
+  color: white;
+  font-size: 30rem;
+  line-height: 1;
+  font-weight: 700;
+  margin-top: 14rem;
+  display: inline-block;
+}
