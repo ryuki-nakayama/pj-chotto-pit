@@ -21,6 +21,17 @@ $transition-timing-function: ease-in-out;
   @include fadeIn();
 }
 
+.animation-fade-in._title {
+  & + .feature__up-text {
+    @include fadeIn();
+    transition-delay: .2s;
+  }
+
+  &._inview + .feature__up-text {
+    opacity: 1;
+  }
+}
+
 .animation-fade-up {
   $property: opacity, transform;
   @include fadeIn($property);
@@ -28,6 +39,46 @@ $transition-timing-function: ease-in-out;
 
   &._inview {
     transform: translateY(0);
+  }
+}
+
+.animation-fade-up-sm {
+  @include atQuery(sm) {
+    $property: opacity, transform;
+    @include fadeIn($property);
+    transform: translateY(30rem);
+
+    &._arrow {
+      transform: translate(-50%, 30rem) rotate(90deg);
+    }
+
+    &._inview {
+      transform: translateY(0);
+
+      &._arrow {
+        transform: translate(-50%, 0) rotate(90deg);
+      }
+    }
+  }
+}
+
+.animation-fade-right-pc {
+  @include atQuery(md) {
+    $property: opacity, transform;
+    @include fadeIn($property);
+    transform: translateX(-30rem);
+
+    &._arrow {
+      transform: translateX(calc(110% - 30rem));
+    }
+
+    &._inview {
+      transform: translateX(0);
+
+      &._arrow {
+        transform: translateX(110%);
+      }
+    }
   }
 }
 
