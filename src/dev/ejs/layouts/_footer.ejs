@@ -1,22 +1,11 @@
 	<footer class="footer">
-		<div class="footer__content">
-
-			<div class="footer__element footer__tel">
-				<a href="tel:0120730230">
-					<img src="<%= path %>img/footer-tel.png" alt="ちょっとピット事業部 0120-730-230">
-				</a>
-			</div>
-
-			<div class="footer__element footer__register">
-				<a href="">
-					加盟店登録<span class="text-sm">はこちら</span>
-				</a>
-			</div>
-
-		</div>
 	</footer>
 
+	<!-- Start to-top -->
 	<%- include(path + 'common/_to-top'); %>
+
+	<!-- Start cta -->
+	<%- include(path + 'components/_cta'); %>
 
 	<!-- Start script -->
 	<%- include('../common/_script', {path: path}); %>

@@ -4,45 +4,9 @@
 /* footer
 --------------------------------------------------*/
 .footer {
-  padding: 35rem 0;
-}
-
-.footer__content {
-  display: flex;
-}
-
-.footer__element {
-  width: 50%;
-  text-align: center;
-  padding: 25rem;
-}
-
-.footer__tel {
-  background: linear-gradient(to bottom, #FFA200 0%, #FFA200 50%, #FF911A 50%, #FF911A 100%);
-
-  img {
-    max-width: 400rem;
-    @include atQuery(sm) {
-      max-width: 280rem;
-    }
-  }
-}
-
-.footer__register {
-  background: linear-gradient(to bottom, #7BA700 0%, #7BA700 50%, #51A200 50%, #51A200 100%);
-  font-size: 50rem;
-  color: white;
-  font-weight: 800;
+  // padding: 35rem 0;
+  height: 152rem;
   @include atQuery(sm) {
-    font-size: 35rem;
-  }
-
-  .text-sm {
-    font-size: 24rem;
-    font-weight: 700;
-    margin-left: 5rem;
-    @include atQuery(sm) {
-      font-size: 16rem
-    }
+    height: 120rem;
   }
 }
