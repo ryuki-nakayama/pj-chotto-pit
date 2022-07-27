@@ -8,6 +8,16 @@
   left: 0;
   bottom: 0;
   width: 100%;
+
+  a {
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
 }
 
 .cta__content {

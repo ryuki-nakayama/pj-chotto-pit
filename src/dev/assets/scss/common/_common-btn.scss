@@ -11,8 +11,15 @@
   width: 100%;
   border-radius: 55rem;
   font-weight: 700;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
   @include atQuery(sm) {
     font-size: 24rem;
+  }
+
+  &:hover {
+    transform: translateY(4rem);
   }
 
   // modifier background color
