@@ -12,11 +12,30 @@
   background-color: black;
   border: max(5rem, 5px) solid white;
   border-radius: 50%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include atSpecifiedQuery(max, 1920px) {
+    right: 100rem;
+    bottom: 240rem;
+  }
+  @include atSpecifiedQuery(max, 1080px) {
+    right: 50rem;
+    bottom: 240rem;
+  }
+  @include atQuery(sm) {
+    width: 110rem;
+    height: 110rem;
+    right: 16rem;
+    bottom: 210rem;
+  }
 }
 
 .to-top__icon {
   font-size: 0;
+  max-width: 22rem;
+  margin: 0 auto;
 }
 
 .to-top__text {
@@ -26,4 +45,7 @@
   font-weight: 700;
   margin-top: 14rem;
   display: inline-block;
+  @include atQuery(sm) {
+    font-size: 24rem;
+  }
 }

@@ -111,6 +111,16 @@
   position: absolute;
   bottom: 0;
   right: -10%;
+  @include atSpecifiedQuery(max, 1800px) {
+    max-width: 448rem;
+  }
+  @include atSpecifiedQuery(max, 1440px) {
+    max-width: 350rem;
+    right: -2%;
+  }
+  @include atSpecifiedQuery(max, 1080px) {
+    max-width: 300rem;
+  }
   @include atQuery(sm) {
     max-width: 260rem;
     right: 0;
