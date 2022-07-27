@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* cta
+--------------------------------------------------*/
+.cta {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.cta__content {
+  display: flex;
+}
+
+.cta__element {
+  width: 50%;
+  text-align: center;
+  padding: 25rem;
+}
+
+.cta__tel {
+  background: linear-gradient(to bottom, #FFA200 0%, #FFA200 50%, #FF911A 50%, #FF911A 100%);
+
+  img {
+    max-width: 400rem;
+    @include atQuery(sm) {
+      max-width: 280rem;
+    }
+  }
+}
+
+.cta__register {
+  background: linear-gradient(to bottom, #7BA700 0%, #7BA700 50%, #51A200 50%, #51A200 100%);
+  font-size: 50rem;
+  color: white;
+  font-weight: 800;
+  @include atQuery(sm) {
+    font-size: 35rem;
+  }
+
+  .text-sm {
+    font-size: 24rem;
+    font-weight: 700;
+    margin-left: 5rem;
+    @include atQuery(sm) {
+      font-size: 16rem
+    }
+  }
+}

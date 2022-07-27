@@ -4,7 +4,7 @@
  * @param {Number} duration アニメーションの時間
  * @returns
  */
- function fadeIn(node, duration = 300) {
+function fadeIn(node, duration = 300) {
   // display: noneでないときは何もしない
   if (getComputedStyle(node).display !== 'none') return;
 
@@ -67,7 +67,7 @@ const fadeOut = (node, duration = 300) => {
  * フローティングボタンを表示するタイミングの閾値は`scrollThreshold`に設定する
  * TOPボタンをクリックでページトップまでスクロール
  */
- {
+{
   const TO_TOP = document.getElementById('js-toTop');
   const MAIN_OFFSET_TOP = document.getElementById('js-main').offsetTop;
 
@@ -108,4 +108,36 @@ const fadeOut = (node, duration = 300) => {
   document.addEventListener('DOMContentLoaded', displayOperation);
   window.addEventListener('scroll', displayOperation);
   TO_TOP.addEventListener('click', toTop);
+}
+
+/**
+ * スクロールアニメーション
+ * inview.jsを使用
+ */
+{
+  // (function () {
+    //   const FADE_IN = document.getElementsByClassName('js-fadeIn');
+    //   const fadeInLen = FADE_IN.length;
+    //   for (let i = 0; i < fadeInLen; i++) {
+      //     console.log(FADE_IN[i]);
+      //     document.addEventListener('inview', () => {
+        //       FADE_IN[i].classList.add('_inview');
+        //     });
+        //   }
+        // }());
+
+  const addInviewClass = (_this) => {
+    delay = _this.data('delay') ? _this.data('delay') : 0;
+    setTimeout(() => {
+      _this.addClass('_inview');
+    }, delay);
+  }
+
+  // スクロールして表示領域に入ったらclass付与
+  $(function () {
+    $(".js-inview").on("inview", function () {
+      // $(this).addClass("_inview");
+      addInviewClass($(this));
+    });
+  });
 }
