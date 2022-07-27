@@ -16,7 +16,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: min(42.395833vw, 814rem);
+  // max-width: min(42.395833vw, 814rem);
+  max-width: 814rem;
   width: 100%;
   @include atQuery(sm) {
     max-width: 566rem;

@@ -6,7 +6,7 @@
 .comment {
   background-color: #EAB624;
   position: relative;
-  padding: 80rem 0 110rem;
+  padding: 90rem 0 110rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,7 +26,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  max-width: min(51.458333vw, 988rem);
+  // max-width: min(51.458333vw, 988rem);
+  max-width: 988rem;
   width: 100%;
   @include atQuery(sm) {
     max-width: 672rem;
@@ -94,6 +95,7 @@
   position: relative;
   @include atQuery(md) {
     margin-left: 28rem;
+    padding-bottom: 50rem;
   }
   @include atQuery(sm) {
     margin-top: 36rem;
