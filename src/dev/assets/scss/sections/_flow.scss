@@ -100,15 +100,13 @@
   @include atQuery(sm) {
     text-align: left;
     @include atQuery(sm) {
-      // padding-left: 70rem;
-      // padding-right: 90rem;
       padding: 0 80rem;
     }
   }
 }
 
 .flow__img {
-  max-width: 23.28125vw;
+  max-width: min(23.28125vw, 448px);
   width: 100%;
   position: absolute;
   bottom: 0;
