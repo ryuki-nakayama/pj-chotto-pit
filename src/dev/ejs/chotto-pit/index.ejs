@@ -1,0 +1,48 @@
+<% var title = 'トップページのタイトル'; %> <%# ページタイトル %>
+<% var description = 'トップページのディスクリプション'; %> <%# ページディスクリプション %>
+<% var path = '../'; %> <%# ページディレクトリ %>
+<% var pageName = 'chotto-pit-page'; %> <%# ページ名 | bodyタグにここで指定したクラスが付与される | Block要素とのクラス名衝突を避けるため、〇〇-pageといったクラス名を推奨 %>
+
+<%# ヘッダーコンポーネントの読み込み %>
+<%- include(path + 'layouts/_header.ejs', {
+  title: title,
+  description: description,
+  path: path,
+  pageName: pageName,
+}); %>
+
+<!-- Start hero-img -->
+<%- include(path + 'sections/_hero-img', {
+  path: path,
+  imgDir: 'index/hero-img.jpeg',
+  text: 'TOP TITLE'
+}); %>
+
+<!-- Start main -->
+<main id="js-main" class="main">
+
+  <!-- Start about -->
+  <%- include(path + 'sections/_about', { path: path }); %>
+
+  <!-- Start service -->
+  <%- include(path + 'sections/_service', { path: path }); %>
+
+  <!-- Start feature -->
+  <%- include(path + 'sections/_feature', { path: path }); %>
+
+  <!-- Start wage -->
+  <%- include(path + 'sections/_wage', { path: path }); %>
+
+  <!-- Start comment -->
+  <%- include(path + 'sections/_comment', { path: path }); %>
+
+  <!-- Start flow -->
+  <%- include(path + 'sections/_flow', { path: path }); %>
+
+  <!-- Start company -->
+  <%- include(path + 'sections/_company', { path: path }); %>
+
+</main>
+
+<%# フッターコンポーネントの読み込み %>
+<%- include(path + 'layouts/_footer', {path: path}); %>

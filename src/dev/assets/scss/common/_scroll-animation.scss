@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+$transition-duration: .5s;
+$transition-timing-function: ease-in-out;
+
+@mixin fadeIn($property: opacity) {
+  opacity: 0;
+  transition-property: $property;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+
+  &._inview {
+    opacity: 1;
+  }
+}
+
+/* scroll-animation
+--------------------------------------------------*/
+.animation-fade-in {
+  @include fadeIn();
+}
+
+.animation-fade-in._title {
+  & + .feature__up-text {
+    @include fadeIn();
+    transition-delay: .2s;
+  }
+
+  &._inview + .feature__up-text {
+    opacity: 1;
+  }
+}
+
+.animation-fade-up {
+  $property: opacity, transform;
+  @include fadeIn($property);
+  transform: translateY(30rem);
+
+  &._inview {
+    transform: translateY(0);
+  }
+}
+
+.animation-fade-up-sm {
+  @include atQuery(sm) {
+    $property: opacity, transform;
+    @include fadeIn($property);
+    transform: translateY(30rem);
+
+    &._arrow {
+      transform: translate(-50%, 30rem) rotate(90deg);
+    }
+
+    &._inview {
+      transform: translateY(0);
+
+      &._arrow {
+        transform: translate(-50%, 0) rotate(90deg);
+      }
+    }
+  }
+}
+
+.animation-fade-right-pc {
+  @include atQuery(md) {
+    $property: opacity, transform;
+    @include fadeIn($property);
+    transform: translateX(-30rem);
+
+    &._arrow {
+      transform: translateX(calc(110% - 30rem));
+    }
+
+    &._inview {
+      transform: translateX(0);
+
+      &._arrow {
+        transform: translateX(110%);
+      }
+    }
+  }
+}
+
+.animation-fade-up-hero-img {
+  $property: opacity, transform;
+  @include fadeIn($property);
+  transform: translate(-50%, calc(-50% + 30rem)) !important;
+
+  &._inview {
+    transform: translate(-50%, -50%) !important;
+  }
+}

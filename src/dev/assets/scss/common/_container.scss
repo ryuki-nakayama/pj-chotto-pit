@@ -14,13 +14,19 @@
   }
 
   // modifier | small
-  &._sm {
-    --container-width: #{g.$container-width-sm};
-  }
+  // &._sm {
+  //   --container-width: #{g.$container-width-sm};
+  // }
 
   // modifier | large
   &._lg {
     --container-width: #{g.$container-width-lg};
+  }
 
+  // modifier | small large
+  &._sm-lg {
+    @include g.atQuery(sm) {
+      padding: 0 35rem;
+    }
   }
 }

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* about
+--------------------------------------------------*/
+.about {
+  background-color: #EAB624;
+  position: relative;
+  padding: 116rem 0 70rem;
+  @include atQuery(sm) {
+    padding: 250rem 0 60rem;
+  }
+}
+
+.about__bg-text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // max-width: min(42.395833vw, 814rem);
+  max-width: 814rem;
+  width: 100%;
+  @include atQuery(sm) {
+    max-width: 566rem;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.about__title {
+  font-size: 43rem;
+  text-align: center;
+  padding-left: 20rem;
+  position: relative;
+  max-width: 520rem;
+  display: block;
+  font-weight: 700;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: min(12vw, 215rem);
+    height: min(12vw, 215rem);
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    @include atQuery(sm) {
+      width: 215rem;
+      height: 215rem;
+    }
+    @include atSpecifiedQuery(max, 480px) {
+      width: 165rem;
+      height: 165rem;
+    }
+  }
+
+  span {
+    position: relative;
+  }
+}
+
+.about__text-wrapper {
+  text-align: center;
+}
+
+.about__text {
+  margin-top: 76rem;
+  display: inline-block;
+  text-align: left;
+  max-width: 745rem;
+}
+

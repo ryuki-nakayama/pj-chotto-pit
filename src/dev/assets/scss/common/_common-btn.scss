@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* common-btn
+--------------------------------------------------*/
+.common-btn {
+  font-size: 20rem;
+  line-height: 1;
+  padding: 40rem 0;
+  max-width: 580rem;
+  width: 100%;
+  border-radius: 55rem;
+  font-weight: 700;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing-function;
+  @include atQuery(sm) {
+    font-size: 24rem;
+  }
+
+  &:hover {
+    transform: translateY(4rem);
+  }
+
+  // modifier background color
+  &._yellow {
+    background-color: #FFDB43;
+  }
+
+  &._black {
+    background-color: #363638;
+    color: white;
+  }
+}

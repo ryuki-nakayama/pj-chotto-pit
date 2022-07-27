@@ -36,10 +36,10 @@ const devPath = {
 const distPath = {
   'html': distRoot + '/',
   'pug': distRoot + '/',
-  'css': distRoot + '/css/',
-  'img': distRoot + '/img/',
-  'js': distRoot + '/js/',
-  'pdf': distRoot + '/pdf/',
+  'css': distRoot + '/chotto-pit/css/',
+  'img': distRoot + '/chotto-pit/img/',
+  'js': distRoot + '/chotto-pit/js/',
+  'pdf': distRoot + '/chotto-pit/pdf/',
 };
 
 /**
@@ -117,7 +117,7 @@ const buildServer = done => {
     files: ["**/*"],
     // 静的サイト
     server: {
-      baseDir: distPath.html,
+      baseDir: './src/dist/chotto-pit/',
       index: 'index.html',
     },
     // 動的サイト

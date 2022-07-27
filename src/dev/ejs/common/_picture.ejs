@@ -1,0 +1,30 @@
+<%#
+  picture
+  <picture>の出力
+  スマホ用画像ファイルには接尾辞「-sm」をつける。
+
+  Accepts:
+  - path: {String} ディレクトリパス
+  - imgName: {String} 画像ファイル名
+  - extension: {String} 画像ファイルの拡張子
+  - alt: {String} altテキスト
+
+  Style:
+  - none
+
+  Script:
+  -none
+%>
+
+<%# Usage: %>
+<%# include(path + 'common/_picture', {
+  path: path,
+  imgName: 'hero-img',
+  extension: 'jpg',
+  alt: 'ちょっとピット CHOTTO PIT'
+}); %>
+
+<picture>
+  <source srcset="<%= path %>img/<%= imgName %>.<%= extension %>" media="(min-width: 769px)">
+  <img src="<%= path %>img/<%= imgName %>-sm.<%= extension %>" alt="<%= alt %>">
+</picture>

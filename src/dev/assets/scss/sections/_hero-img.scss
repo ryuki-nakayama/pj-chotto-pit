@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@use '../global' as *;
+
+/* hero-img
+--------------------------------------------------*/
+.hero-img {
+  position: relative;
+
+  .img-wrap {
+    padding-top: 47%;
+    @include atQuery(sm) {
+      padding-top: 74%;
+    }
+  }
+}
+
+.hero-img__title-img {
+  max-width: 32.083333vw;
+  width: 100%;
+  @include posCenter(xy);
+  @include atQuery(sm) {
+    top: 100%;
+    max-width: 62.058824vw;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// ベースstylesheet
+// リセットcssやbodyなどへのスタイル
+
+@use './global';
+@use './foundation';
+
+// common
+@use './common/index';
+
+// components
+@use './components/cta';
+
+// helper
+@use './helper';
+
+// layouts
+@use './layouts/header';
+@use './layouts/footer';
+
+// sections
+@use './sections/about';
+@use './sections/comment';
+@use './sections/company';
+@use './sections/feature';
+@use './sections/flow';
+@use './sections/hero-img';
+@use './sections/service';
+@use './sections/wage';

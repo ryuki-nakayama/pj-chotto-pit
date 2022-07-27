@@ -3,3 +3,10 @@
 
 /* footer
 --------------------------------------------------*/
+.footer {
+  // padding: 35rem 0;
+  height: 152rem;
+  @include atQuery(sm) {
+    height: 120rem;
+  }
+}

@@ -1,7 +1,13 @@
-<!-- Start hero-img -->
-<div class="top__hero-img hero-img">
-  <div class="img-wrap">
-    <div class="img" style="background-image: url(<%= path %>img/<%= imgDir %>);"></div>
-    <h1 class="hero-img__text cr-black"><%= text %></h1>
+<div class="hero-img">
+  <div class="js-inview animation-fade-in img-wrap" data-delay="500">
+    <%- include(path + 'common/_picture', {
+      path: path,
+      imgName: 'hero-img',
+      extension: 'jpg',
+      alt: 'ちょっとピット CHOTTO PIT'
+    }); %>
+  </div>
+  <div class="js-inview animation-fade-up-hero-img hero-img__title-img" data-delay="1000">
+    <img src="<%= path %>img/chotto-pit.png" alt="ちょっとピット CHOTTO PIT タイヤで企業とお客様をつなぐお手伝いをするサービスです。">
   </div>
 </div>

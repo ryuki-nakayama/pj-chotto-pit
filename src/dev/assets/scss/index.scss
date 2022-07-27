@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// ちょっとピットページstylesheet
+
+// components
+// @use './components/sample-snippets';
+
+// sections
+@use './sections/about';
+@use './sections/comment';
+@use './sections/company';
+@use './sections/feature';
+@use './sections/flow';
+@use './sections/hero-img';
+@use './sections/service';
+@use './sections/wage';
