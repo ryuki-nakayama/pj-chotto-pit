@@ -85,9 +85,10 @@
   margin-top: 16rem;
   @include atQuery(sm) {
     text-align: left;
-    @include atQuery(sm) {
-      padding: 0 80rem;
-    }
+    padding: 0 80rem;
+    font-size: 28rem;
+    letter-spacing: 0.075em;
+    line-height: calcLineHeight(30, 28);
   }
 }
 

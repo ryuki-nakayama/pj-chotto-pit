@@ -65,7 +65,7 @@
   }
   @include atQuery(sm) {
     margin-top: 40rem;
-    padding-left: 40rem;
+    padding-left: 20rem;
   }
 }
 
@@ -73,8 +73,10 @@
   font-size: 27rem;
   line-height: calcLineHeight(47, 27);
   position: relative;
-  display: flex;
-  align-items: center;
+  @include atQuery(md) {
+    display: flex;
+    align-items: center;
+  }
   @include atQuery(sm) {
     font-size: 33rem;
     line-height: calcLineHeight(58, 33);
@@ -83,12 +85,18 @@
   .icon {
     max-width: 24rem;
     margin-right: 10rem;
+    @include atQuery(sm) {
+      padding-bottom: 15rem;
+    }
   }
 }
 
 // up
 .feature__up {
   margin-top: 36rem;
+  @include atQuery(sm) {
+    margin-top: 26rem;
+  }
 }
 
 .feature__up-list {
@@ -104,7 +112,7 @@
   padding: 0 10rem;
   @include atQuery(sm) {
     width: 50%;
-    margin-top: 20rem;
+    margin-top: 30rem;
   }
 }
 
@@ -132,7 +140,9 @@
   line-height: calcLineHeight(32, 22);
   margin-top: 28rem;
   @include atQuery(sm) {
-    font-size: 20rem;
+    font-size: 28rem;
+    line-height: calcLineHeight(37, 28);
+    letter-spacing: -0.025em;
   }
 }
 
@@ -209,6 +219,10 @@
   font-size: 22rem;
   letter-spacing: -0.025em;
   line-height: calcLineHeight(39, 22);
+  @include atQuery(sm) {
+    font-size: 28rem;
+    line-height: calcLineHeight(48, 28);
+  }
 }
 
 .feature__item-merchant-img {

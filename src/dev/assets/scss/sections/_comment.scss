@@ -26,7 +26,6 @@
   position: absolute;
   top: 0;
   right: 0;
-  // max-width: min(51.458333vw, 988rem);
   max-width: 988rem;
   width: 100%;
   @include atQuery(sm) {
@@ -120,7 +119,8 @@
   margin-top: 23rem;
   @include atQuery(sm) {
     margin-top: 15rem;
-    line-height: calcLineHeight(38, 20);
+    font-size: 28rem;
+    line-height: calcLineHeight(38, 28);
   }
 }
 
