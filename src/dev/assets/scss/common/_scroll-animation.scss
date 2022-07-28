@@ -37,8 +37,16 @@ $transition-timing-function: ease-in-out;
   @include fadeIn($property);
   transform: translateY(30rem);
 
+  &._flow-arrow {
+    transform: translateY(calc(10rem));
+  }
+
   &._inview {
     transform: translateY(0);
+
+    &._flow-arrow {
+      transform: translateY(-20rem);
+    }
   }
 }
 

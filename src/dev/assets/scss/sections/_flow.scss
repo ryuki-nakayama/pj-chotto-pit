@@ -46,21 +46,6 @@
     #dbdcdc 75%,
     #888 100%
   );
-  // background: linear-gradient(to top,
-  //   #dbdcdc 100%,
-  //   #c8c9ca 76%,
-  //   #bababb 72%,
-  //   #9e9f9f 64%,
-  //   #8d8e8e 56%,
-  //   #888 51%,
-  //   #8d8d8d 47%,
-  //   #9c9c9c 42%,
-  //   #b6b6b6 37%,
-  //   #d9dada 32%,
-  //   #dbdcdc 31%,
-  //   #eeeeef 23%,
-  //   #dbdcdc 17%,
-  //   #888 0%);
   display: block;
   z-index: -1;
   @include atQuery(sm) {
@@ -81,6 +66,7 @@
   text-align: center;
   letter-spacing: .075em;
   filter: drop-shadow(6rem 6rem 11rem rgba(#040000, .3));
+  position: relative;
 
   @include notFirst() {
     margin-top: 40rem;
@@ -103,6 +89,16 @@
       padding: 0 80rem;
     }
   }
+}
+
+.flow__arrow {
+  max-width: 78rem;
+  z-index: 1;
+  filter: drop-shadow(0 0 3rem 3rem rgba($color: #000000, $alpha: .3));
+  transform: translateY(-30%);
+  margin: 0 auto;
+  height: 0rem;
+  position: relative;
 }
 
 .flow__img {
