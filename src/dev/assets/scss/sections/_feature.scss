@@ -13,7 +13,7 @@
 // title
 .feature__title {
   font-size: 60rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.025em;
   line-height: 1;
   text-align: center;
@@ -120,7 +120,7 @@
   .emphasis {
     color: #E95736;
     font-size: 50rem;
-    font-weight: 800;
+    font-weight: 900;
     @include atQuery(sm) {
       font-size: 43rem;
     }
@@ -143,7 +143,7 @@
 
 .feature__item-title {
   font-size: 50rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1;
   text-align: center;
   @include atQuery(sm) {
