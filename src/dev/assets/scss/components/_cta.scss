@@ -8,6 +8,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: $layer-floating;
 
   a {
     transition-property: opacity;

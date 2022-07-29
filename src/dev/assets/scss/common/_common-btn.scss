@@ -30,5 +30,8 @@
   &._black {
     background-color: #363638;
     color: white;
+    @include atQuery(sm) {
+      font-size: 24rem;
+    }
   }
 }
